@@ -11,8 +11,8 @@ from sklearn.model_selection import train_test_split
 import torch
 import torch.nn as nn
 
-from program_synthesis.repertoire import BaseRepertoire
-from program_synthesis.datasets import make_gaussian_datasets
+from combinatorial_synthesis.repertoire import BaseRepertoire
+from combinatorial_synthesis.datasets import make_gaussian_datasets
 
 
 class PSTransitioner:

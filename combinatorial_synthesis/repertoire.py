@@ -3,7 +3,7 @@ from fragile.backend import dtype, tensor, typing
 import torch
 from torch import nn
 
-from program_synthesis.modules import Operator, OperatorParams
+from combinatorial_synthesis.modules import Operator, OperatorParams
 
 
 class BaseRepertoire(nn.Module):

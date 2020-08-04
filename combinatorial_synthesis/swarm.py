@@ -1,6 +1,6 @@
 from fragile.core import Swarm
 
-from program_synthesis.walkers import ClassificationWalkers
+from combinatorial_synthesis.walkers import ClassificationWalkers
 
 
 class ClassificationSwarm(Swarm):

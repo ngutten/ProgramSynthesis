@@ -5,11 +5,11 @@ from fragile.distributed.env import RayEnv
 import ray
 
 
-from program_synthesis.env import ProgramSynthesis
-from program_synthesis.datasets import make_wines, make_high_skewed_gaussian
-from program_synthesis.model import ProgramSamplerNop
-from program_synthesis.repertoire import Repertoire
-from program_synthesis.swarm import ClassificationSwarm
+from combinatorial_synthesis.env import ProgramSynthesis
+from combinatorial_synthesis.datasets import make_wines, make_high_skewed_gaussian
+from combinatorial_synthesis.model import ProgramSamplerNop
+from combinatorial_synthesis.repertoire import Repertoire
+from combinatorial_synthesis.swarm import ClassificationSwarm
 
 from tests.test_swarm import TestSwarm
 

@@ -3,7 +3,7 @@ from fragile.core.models import DiscreteModel
 from fragile.core.states import StatesModel
 
 
-from program_synthesis.env import ProgramSynthesis
+from combinatorial_synthesis.env import ProgramSynthesis
 
 
 class ProgramSampler(DiscreteModel):

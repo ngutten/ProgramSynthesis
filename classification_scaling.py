@@ -52,7 +52,7 @@ def create_swarm(n_walkers, seed=0):
         env=env,
         model=model,
         n_walkers=n_walkers,
-        max_epochs=5,
+        max_epochs=100,
         fix_best=True,
         use_notebook_widget=False,
         show_pbar=False,
@@ -85,11 +85,11 @@ def evaluate_swarm(swarm, agent_index, prog_ix, epoch_ix, seed):
     )
 
 
-def test_training():
-    pop_size = 2
-    n_walkers = 8
-    metabatch = 2
-    n_epochs = 3
+def scaling_experiment():
+    pop_size = 1
+    n_walkers = 64
+    metabatch = 32
+    n_epochs = 150
     population = [create_swarm(n_walkers=n_walkers, seed=i) for i in range(pop_size)]
     trainers = [ModuleTrainer(swarm) for swarm in population]
 
@@ -142,3 +142,8 @@ def test_training():
         all_losses.extend(losses)
         exchange_operators(population, programs, agent_ix)
         df = pd.DataFrame(all_metrics)
+        df.to_csv("scaling_{}w_{}pop.csv".format(n_walkers, pop_size))
+
+
+if __name__ == "__main__":
+    scaling_experiment()

@@ -3,8 +3,8 @@ from fragile.core import Swarm
 import numpy as np
 import torch
 
-from program_synthesis.env import ProgramSynthesis, PSTransitioner
-from program_synthesis.modules import Operator
+from combinatorial_synthesis.env import ProgramSynthesis, PSTransitioner
+from combinatorial_synthesis.modules import Operator
 
 
 class AdamOptimizer(torch.nn.Module):
